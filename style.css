@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+   /* overflow: hidden; */   
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+/*
+.wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(64, 224, 208, 0.2);
+}
+*/
+.header {
+    height: 50px;
+    background-color: rgba(25, 74, 115, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    opacity: 0;       
+    transition: all 1s ease 0s;
+}
+
+.header:hover {
+    opacity: 1;
+}
+
+.nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav__item {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.section {
+    height: 100vh;
+}
+
+.main {
+    background-image: url(img/rabstol_net_new_year_139.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    z-index: 100;
+    position: relative;
+    display: flex;  
+    width: 75%;  
+    margin-bottom: 20px;
+    font-family: 'Marck Script', cursive;
+}
+
+.about__avatar {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.about__avatar:hover {
+    transform: rotate(20deg);
+}
+
+.about__img {
+    height: 100%;
+}
+
+.about__info {
+    background-color: rgba(25, 74, 115, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+@keyframes run-text {
+    0% {
+        transform: translateX(0);
+    } 
+    100% {
+        transform: translateX(100px);
+        color: red;
+    }
+}
+
+.about__title {
+    font-size: 50px;
+    margin: 0;
+    animation: run-text 2s ease infinite alternate;
+}
+
+.about__text {
+    font-size: 20px;
+}
+
+.button {
+    position: relative;
+    z-index: 100;
+    background-color: #d42726;
+    padding: 15px;
+    display: block;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: arial;
+    text-transform: uppercase;    
+}
+
+.button:hover {
+    box-shadow: 0px 0px 10px 10px #97202c;
+}
+
+.compliment {
+    background-image: url(img/Noviy-God-2048x1152.jpg);
+    color: white;
+    background-size: cover;
+}
+
+.compliment__content {
+    width: 50%;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.compliment__img-wrap {
+    height: 40%;
+    position: relative;
+}
+
+.compliment__img {
+    height: 100%;
+}
+
+.compliment__img-talk {
+    position: absolute;
+    top: 50%;
+    left: -15%;
+}
+
+.poem {
+    background-image: url(img/Christmas-Present-JAyJ-2048x1152-MM-100.jpg);
+    background-size: cover;
+    padding: 50px;    
+}
+
+.poem__title {
+    margin-top: 0;
+    text-align: center;
+}
+
+.poem__list {
+    display: flex;
+    justify-content: center;
+}
+
+.poem__item {
+    width: 300px;
+    min-height: 580px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f5f5dc;
+    padding: 20px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poem__item:hover {
+    border-color: green;
+}
+
+.poem__img-wrap {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.poem__img {
+    height: 100%;
+}
+
+.msg {
+    background-image: url(img/noviy-god100.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.msg__title {
+    margin-bottom: 68px;
+    text-transform: uppercase;
+}
+
+.form-msg {
+    width: 600px;
+    padding: 40px 40px 65px;
+    background-image: url(img/noviy-god.jpg);
+    background-position: right center;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.form-msg__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-msg__row {
+    margin-bottom: 10px;
+}
+
+.form-msg__title-input {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-msg__input, .form-msg__message {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    border-style: none;
+    padding: 10px;
+}
+
+.form-msg__message {
+    height: 200px;
+    resize: none;
+}
+
+.form-msg__button-wrap {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.form-msg__submit {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #f82137;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-msg__img-wrap {
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: -157px;
+}
+
+.form-msg__img {
+    height: 100%;
+}
